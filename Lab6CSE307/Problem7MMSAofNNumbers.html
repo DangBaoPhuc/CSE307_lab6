@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show() {
+            let i = 0;
+            let n = document.getElementById("number").value;
+            const a = n.split(",")
+            let numbermin = 100000000;
+            let numbermax = 0;
+            var numbersum = 0;
+            let avg = 0;
+            while (i < a.length) {
+                if (a[i] < numbermin) { numbermin = parseFloat(a[i]); }
+                if (a[i] > numbermax) { numbermax = parseFloat(a[i]); }
+                (numbersum) = numbersum + parseFloat(a[i]);
+                
+                i += 1;
+            }
+            avg = parseFloat(numbersum / (i))
+            document.getElementById("Min").innerHTML="Min:"+numbermin.toFixed(2);
+            document.getElementById("Max").innerHTML="Max:" +numbermax.toFixed(2);
+            document.getElementById("Sum").innerHTML="Sum:" +numbersum.toFixed(2);
+            document.getElementById("Avg").innerHTML="Avg:" +avg.toFixed(2);
+    
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2><b>MMSA of N number</b></h2>
+    <p>
+        Enter a positive integer N
+        <input type="text" id="number"></input>
+        <button type="button" onclick="show()"> Print Numbers</button>
+    </p>
+    <p id="Min"></p>
+    <p id="Max"></p>
+    <p id="Sum"></p>
+    <p id="Avg"></p>
+
+
+
+
+
+</body>
+
+</html>

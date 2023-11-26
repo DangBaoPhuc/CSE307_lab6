@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show() {
+            let i = 1;
+            let n = parseInt(document.getElementById("number").value);
+            if (!n || n < 0)
+                document.getElementById("print").innerHTML = "Please enter the meaningful positive integer"
+            else {
+                document.getElementById("print").innerHTML = "";
+                let count = 0;
+                var flag = true;
+                while (i <= n) {
+                    if (n % i == 0) {
+                        count++;
+                    }
+                    if (n == 1) { flag = false; break; }
+                    if (count > 2) {
+                        flag = false;
+                        break;
+                    }
+                    i++;
+                }
+                if (flag) { document.getElementById("print").innerHTML = "true" }
+                else { document.getElementById("print").innerHTML = "false" }
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2><b>Prime check</b></h2>
+    <p>
+        Enter a positive integer N
+        <input type="text" id="number"></input>
+        <button type="button" onclick="show()"> Print Numbers</button>
+    </p>
+    <p id="print"></p>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show() {
+            let i = 1;
+            var n = document.getElementById("number").value;
+            console.log(document.getElementById("number").value)
+            for(let i=0;i<n.)
+            if (!n || n < 0)
+                document.getElementById("print").innerHTML = "Please enter the meaningful positive integer"
+            else {
+                document.getElementById("print").innerHTML = "";
+                while (i <= n) {
+                    document.getElementById("print").innerHTML += " " + i;
+                    i++;
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <h2><b>Number from 1 to N</b></h2>
+    <p>
+        Enter a positive integer N
+
+        <input type="text" id="number"></input>
+
+        <button type="button" onclick="show()"> Print Numbers</button>
+    </p>
+    <p id="print"></p>
+
+
+</body>
+
+</html>

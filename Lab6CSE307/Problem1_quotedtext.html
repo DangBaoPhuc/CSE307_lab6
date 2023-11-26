@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.writeln("He said, “I don’t care.”")
+        console.log("He said, “I don’t care.”")
+    </script>
+    <div>
+        <input type="text" id="a" value="asd">
+        <p id="ID"></p>
+        <script>
+            console.log(document.getElementById("ID").innerHTML)
+            document.getElementById("ID").innerHTML = document.getElementById("a").value;
+        </script>
+    </div>
+</body>
+
+</html>
